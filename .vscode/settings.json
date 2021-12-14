@@ -1,0 +1,8 @@
+{
+	"python.pythonPath": "/Users/trevorwang/Library/Caches/pypoetry/virtualenvs/aapt2-eViEydLR-py3.8/bin/python",
+	"python.testing.pytestArgs": [
+		"."
+	],
+	"python.testing.unittestEnabled": false,
+	"python.testing.pytestEnabled": true
+}

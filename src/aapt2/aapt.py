@@ -29,7 +29,7 @@ def aapt(args='--help'):
                 'unknown system type, only support Darwin、Linux、Windows')
 
         aapt_path = os.path.join(os.path.dirname(
-            __file__), 'bin', system_name, 'aapt_64')
+            __file__), 'bin', system_name, 'aapt2')
         if system_name == 'Windows':
             aapt_path += '.exe'
 
