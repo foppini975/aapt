@@ -79,9 +79,10 @@ def version():
 
 def get_apk_info(file_path):
     try:
-        stdout = dump(file_path, 'badging')
+        stdout_tmp = dump(file_path, 'badging')
+        stdout = re.sub(".*: warn: invalid type name .*", "", stdout_tmp).strip()
         match = re.compile(
-            "package: name='(\\S+)' versionCode='(\\d+)' versionName='(\\S+)'").match(stdout)
+            "package: name='(\\S+)' versionCode='(\\d+)' versionName='([\\S ]+?)'").match(stdout)
         if not match:
             raise Exception("can't get packageinfo")
         package_name = match.group(1)
